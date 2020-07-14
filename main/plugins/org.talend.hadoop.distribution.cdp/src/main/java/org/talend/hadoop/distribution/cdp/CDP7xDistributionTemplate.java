@@ -57,7 +57,16 @@ public class CDP7xDistributionTemplate extends AbstractDynamicCDPDistributionTem
 	public CDP7xDistributionTemplate(DynamicPluginAdapter pluginAdapter) throws Exception {
 		super(pluginAdapter);
 	}
-
+	@Override
+	public boolean doSupportImpalaConnector() {
+		
+		return true;
+	}
+	@Override
+	public boolean doImpalaSupportSSL() {
+		
+		return true;
+	}
 	@Override
 	public String getSqoopPackageName() {
 		return ESqoopPackageName.ORG_APACHE_SQOOP.toString();
